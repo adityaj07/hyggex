@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
+<h1 align="center">Component for Hyggex</h1>
+<p align="center">
+  <img src="public/demo/Desktop-1.png" alt="hyggex">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Component using Reactjs, Tailwind css,and Typescript.
 
-Currently, two official plugins are available:
+## Technology used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Reactjs
+- Tailwind css
+- Typescript
 
-## Expanding the ESLint configuration
+## Screenshots:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Desktop View:
 
-- Configure the top-level `parserOptions` property like this:
+<table>
+  <tr>
+    <td>
+      <img src="public/demo/Desktop-1.png" alt="DesktopImage 1">
+    </td>
+    <td>
+      <img src="public/demo/Desktop-2.png" alt="DesktopImage 2">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="public/demo/Desktop-3.png" alt="DesktopImage 3">
+    </td>
+    <td>
+      <img src="public/demo/Desktop-4.png" alt="DesktopImage 4">
+    </td>
+  </tr>
+</table>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Mobile View:
+
+<table>
+  <tr>
+    <td>
+      <img src="public/demo/Mobile-3.jpg" alt="MobileImage 1">
+    </td>
+    <td>
+      <img src="public/demo/Mobile-2.jpg" alt="MobileImage 2">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="public/demo/Mobile-1.jpg" alt="MobileImage 3">
+    </td>
+  </tr>
+</table>
+
+
+## Project Setup
+
+1. _Clone the repository_
+
+```bash
+git clone https://github.com/adityaj07/hyggex.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. _Navigate to the project directory and install dependencies for the project_
+
+```bash
+npm install
+```
+
+3. _Start the development server_
+
+```bash
+npm run dev
+```
+
+<div align="center"><h4>Consider giving the project a star ⭐</h4></div>
+<div align="center"><h4>Made by Aditya Joshi</h4></div>
