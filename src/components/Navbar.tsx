@@ -17,8 +17,11 @@ const Navbar: FC = () => {
           <img src={hyggexLogo} alt="Hyggex Logo" className="w-36 md:w-auto" />
           <div className="justify-between items-center hidden md:flex gap-[40px]">
             <ul className="flex justify-between items-center gap-6">
-              {menuLinks.map((menuLink) => (
-                <li className="text-[#3A3740] text-[18px] hover:drop-shadow-2xl transition-colors duration-200 cursor-pointer">
+              {menuLinks.map((menuLink, index) => (
+                <li
+                  key={index}
+                  className="text-[#3A3740] text-[18px] hover:drop-shadow-2xl transition-colors duration-200 cursor-pointer"
+                >
                   {menuLink.text}
                 </li>
               ))}

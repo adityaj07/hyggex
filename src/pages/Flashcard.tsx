@@ -45,29 +45,36 @@ const Flashcard: FC = () => {
         ]}
       />
 
+      {/* Heading starts */}
       <h1
         className="text-start font-montserrat
        bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[32px] text-pretty"
       >
         Relations and Functions (Mathematics)
       </h1>
+      {/* Heading Ends */}
 
+      {/* Tabs Section starts */}
+      {/* Tab Navbar */}
       <div className="flex justify-center items-center mb-8 mt-8 md:mt-0">
-        {flashCardLinks.map((link) => (
+        {flashCardLinks.map((link, index) => (
           <Tab
             label={link.label}
             isActive={activeTab === link.index}
             onClick={() => handleTabChange(link.index)}
+            key={index}
           />
         ))}
       </div>
 
+      {/* Tab bodies */}
       <div>
         <div
           className={`flex flex-col justify-center items-center gap-4 ${
             activeTab === 0 ? "block" : "hidden"
           }`}
         >
+          {/* StudyCard component */}
           <StudyCard content="9 + 6 + 7x - 2x - 3" />
           <div className="flex justify-between items-center w-full md:w-[50%] mx-auto">
             <img
@@ -116,7 +123,9 @@ const Flashcard: FC = () => {
           <p>No content.</p>
         </div>
       </div>
+      {/* Tab bodies end */}
 
+      {/* Published by & Create button */}
       <div className="flex md:flex-row justify-between items-center mt-14 gap-8">
         <div className="flex justify-center items-center gap-4 self-start">
           <div className="rounded-full p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]">
@@ -143,7 +152,7 @@ const Flashcard: FC = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
+      {/* FAQ Section starts*/}
       <h2
         className="text-start font-inter
        bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[32px] md:text-[48px] mt-12 mb-6 md:mb-2"
@@ -151,10 +160,11 @@ const Flashcard: FC = () => {
         FAQ
       </h2>
       <div className="w-full md:w-[80%] lg:w-[60%]">
-        {faqItems.map((item) => (
-          <FAQitem question={item.question} answer={item.answer} />
+        {faqItems.map((item, index) => (
+          <FAQitem key={index} question={item.question} answer={item.answer} />
         ))}
       </div>
+      {/* FAQ section ends */}
     </div>
   );
 };
