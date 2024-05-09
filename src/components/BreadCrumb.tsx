@@ -35,7 +35,7 @@ export default function Breadcrumbs({
 }) {
   return (
     <nav aria-label="Breadcrumb" className="my-6 block">
-      <ol className={clsx("flex items-center text-[16px] md:text-[18px] flex-wrap")}>
+      <ol className={clsx("flex items-center text-[16px] md:text-[18px] flex-wrap leading-6 tracking-wider")}>
         {breadcrumbs.map((breadcrumb, index) => (
           <li
             key={breadcrumb.href}

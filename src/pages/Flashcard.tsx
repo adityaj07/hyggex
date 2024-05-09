@@ -21,7 +21,7 @@ const Flashcard: FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mt-[5rem]">
       <Breadcrumbs
         breadcrumbs={[
           {
@@ -47,12 +47,12 @@ const Flashcard: FC = () => {
 
       <h1
         className="text-start font-montserrat
-       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[32px]"
+       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[32px] text-pretty"
       >
-        Relations and Functions ( Mathematics )
+        Relations and Functions (Mathematics)
       </h1>
 
-      <div className="flex justify-center items-center mb-8">
+      <div className="flex justify-center items-center mb-8 mt-8 md:mt-0">
         {flashCardLinks.map((link) => (
           <Tab
             label={link.label}
@@ -69,25 +69,29 @@ const Flashcard: FC = () => {
           }`}
         >
           <StudyCard content="9 + 6 + 7x - 2x - 3" />
-          <div className="flex justify-between items-center w-[50%] mx-auto">
-            <img src={reloadIcon} alt="Reload" className="cursor-pointer" />
-            <div className="flex justify-between items-center gap-8">
+          <div className="flex justify-between items-center w-full md:w-[50%] mx-auto">
+            <img
+              src={reloadIcon}
+              alt="Reload"
+              className="cursor-pointer w-8 h-8 md:w-auto md:h-auto"
+            />
+            <div className="flex justify-between items-center gap-4 md:gap-8">
               <img
                 src={leftArrowIcon}
                 alt="left arrow"
-                className="cursor-pointer"
+                className="cursor-pointer w-10 h-10 md:w-auto md:h-auto"
               />
               <span className="font-inter font-bold text-[24px]">01/10</span>
               <img
                 src={rightArrowIcon}
                 alt="right arrow"
-                className="cursor-pointer"
+                className="cursor-pointer w-10 h-10 md:w-auto md:h-auto"
               />
             </div>
             <img
               src={windowIcon}
               alt="Full screen"
-              className="cursor-pointer"
+              className="cursor-pointer w-8 h-8 md:w-auto md:h-auto"
             />
           </div>
         </div>
@@ -113,34 +117,40 @@ const Flashcard: FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mt-14">
-        <div className="flex justify-center items-center gap-4">
+      <div className="flex md:flex-row justify-between items-center mt-14 gap-8">
+        <div className="flex justify-center items-center gap-4 self-start">
           <div className="rounded-full p-4 shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]">
-            <img src={logo} alt="Logo" className="w-10 h-10" />
+            <img src={logo} alt="Logo" className="w-5 md:w-10 h-5 md:h-10" />
           </div>
           <div className="flex flex-col justify-center items-start">
-            <small className="text-[#696671]">Published by</small>
-            <img src={logoName} alt="Logo" />
+            <small className="text-[10px] text-[#696671]">Published by</small>
+            <img
+              src={logoName}
+              alt="Logo"
+              className="w-24 md:w-auto h-w-24 md:h-auto"
+            />
           </div>
         </div>
-        <div className="flex justify-center items-center gap-4">
-          <img src={addIcon} alt="Add logo" />
+
+        <div className="flex justify-center items-center gap-2 md:gap-4 self-start">
+          <img src={addIcon} alt="Add logo" className="w-12 h-12" />
           <span
             className="text-start font-inter
-       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20 py-2 md:py-5 w-[90%] text-[28px]"
+       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20 py-2 md:py-5 w-[90%] text-[20px] md:text-[28px] hidden md:flex"
           >
             Create a Flashcard
           </span>
         </div>
       </div>
 
+      {/* FAQ Section */}
       <h2
         className="text-start font-inter
-       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[48px] mt-12"
+       bg-clip-text text-transparent bg-gradient-to-b from-[#06286E] to-[#164EC0] font-bold relative z-20  py-2 md:py-5 w-[90%] text-[32px] md:text-[48px] mt-12 mb-6 md:mb-2"
       >
         FAQ
       </h2>
-      <div>
+      <div className="w-full md:w-[80%] lg:w-[60%]">
         {faqItems.map((item) => (
           <FAQitem question={item.question} answer={item.answer} />
         ))}
