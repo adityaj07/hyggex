@@ -12,38 +12,40 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center font-inter">
-        <img src={hyggexLogo} alt="Hyggex Logo" className="w-36 md:w-auto" />
-        <div className="justify-between items-center hidden md:flex gap-4">
-          <ul className="flex justify-between items-center gap-4">
-            {menuLinks.map((menuLink) => (
-              <li className="text-[#3A3740] text-[18px] hover:drop-shadow-2xl transition-colors duration-200 cursor-pointer">
-                {menuLink.text}
-              </li>
-            ))}
-          </ul>
-          <button className="bg-gradient-to-b from-[#06286E] to-[#164EC0] px-4 py-2 text-white rounded-full w-[128px] h-[48px] hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]  transition-colors duration-500">
-            Login
-          </button>
-        </div>
+      <div className="h-[5rem] fixed z-50 top-0 left-0 right-0 max-w-[1280px] mx-auto">
+        <nav className=" flex justify-between items-center font-inter bg-white px-6 py-6 ">
+          <img src={hyggexLogo} alt="Hyggex Logo" className="w-36 md:w-auto" />
+          <div className="justify-between items-center hidden md:flex gap-[40px]">
+            <ul className="flex justify-between items-center gap-6">
+              {menuLinks.map((menuLink) => (
+                <li className="text-[#3A3740] text-[18px] hover:drop-shadow-2xl transition-colors duration-200 cursor-pointer">
+                  {menuLink.text}
+                </li>
+              ))}
+            </ul>
+            <button className="bg-gradient-to-b from-[#06286E] to-[#164EC0] px-4 py-2 text-white rounded-full w-[128px] h-[48px] hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]  transition-colors duration-500">
+              Login
+            </button>
+          </div>
 
-        <div
-          onClick={handleNavToggle}
-          className="block md:hidden cursor-pointer"
-        >
-          {isNavOpen ? (
-            <RiCloseFill
-              size={25}
-              className="block lg:hidden animate-fade-in-out text-[#06286E]"
-            />
-          ) : (
-            <RiMenu3Fill
-              size={25}
-              className="block lg:hidden animate-fade-in-out text-[#06286E]"
-            />
-          )}
-        </div>
-      </nav>
+          <div
+            onClick={handleNavToggle}
+            className="block md:hidden cursor-pointer"
+          >
+            {isNavOpen ? (
+              <RiCloseFill
+                size={25}
+                className="block lg:hidden animate-fade-in-out text-[#06286E]"
+              />
+            ) : (
+              <RiMenu3Fill
+                size={25}
+                className="block lg:hidden animate-fade-in-out text-[#06286E]"
+              />
+            )}
+          </div>
+        </nav>
+      </div>
 
       {/* MOBILE NAV  */}
       <div
@@ -70,20 +72,6 @@ const Navbar: FC = () => {
           <button className="bg-white px-4 py-2 text-[#06286E] rounded-full w-[128px] h-[48px] hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)]  transition-colors duration-500 mt-[1rem] font-bold">
             Login
           </button>
-          {/* <div className="flex flex-col items-center gap-4 py-4 ">
-            <Link to="/signup" className="w-full">
-              <Button
-                text="Signup"
-                className="border border-black bg-white text-black w-full hover:bg-[#C0DEDD] transition-colors duration-150 rounded-lg"
-              />
-            </Link>
-            <Link to="/login" className="w-full">
-              <Button
-                text="Login"
-                className="border border-white  w-full hover:bg-[#F1DFDE] hover:text-black transition-colors duration-150 rounded-lg"
-              />
-            </Link>
-          </div> */}
         </div>
       </div>
     </>
